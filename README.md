@@ -77,7 +77,7 @@ flowchart TD
 ## 📁 Repository Structure
 
 ```
-P7-CoM/
+satellite-simulator-adcs-calibration/
 ├── Final_code/
 │   ├── Final_code.ino               # Master FreeRTOS task orchestrator & hardware init
 │   └── Libraries/
