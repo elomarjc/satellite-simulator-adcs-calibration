@@ -20,7 +20,11 @@
 Ground-based testing of satellite Attitude Determination and Control Systems (ADCS) requires emulating the frictionless, zero-gravity rotational dynamics of orbit. This is accomplished using **3-Degree-of-Freedom (3-DoF) spherical air-bearing simulators**.
 
 However, any physical discrepancy between the satellite simulator's geometric center of rotation and its true **Center of Mass (CoM)** generates substantial gravitational disturbance torques:
-$$\boldsymbol{\tau}_g = \mathbf{r}_{\text{CoM}} \times m\mathbf{g}$$
+
+$$
+\boldsymbol{\tau}_g = \mathbf{r}_{\text{CoM}} \times m\mathbf{g}
+$$
+
 These parasitic torques disrupt orbital attitude control experiments and mask micro-Newton reaction wheel maneuvers.
 
 This project implements an autonomous embedded system that dynamically estimates attitude via a **Multiplicative Extended Kalman Filter (MEKF)**, identifies the 3D Center of Mass offset vector $\mathbf{r}_{\text{CoM}}$, and actuates internal linear moving masses to align the center of mass with the spherical bearing pivot.
